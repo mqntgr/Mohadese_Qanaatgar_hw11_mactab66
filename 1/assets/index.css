@@ -1,0 +1,179 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+}
+.theme-dark {
+    background-image: url(./images/bg-desktop-dark.jpg);
+    background-color: rgb(32, 32, 32);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 40px;
+    height: 120px;
+}
+.theme-light {
+    background-color: white;
+    background-image:url(./images/bg-desktop-light.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 40px;
+    height: 120px;
+}
+/* //////////////////////////////////////////////// */
+.flex-flow {
+    display: flex;
+    flex-flow:flex nowrap;
+    align-items: center;
+}
+header {
+    object-fit: contain;
+    text-align: center;
+}
+.title {
+    display: flex;
+    justify-content: space-around; 
+}
+button {
+    background: transparent;
+    border: none;
+}
+.icon-sun {
+    color: white;
+}
+h2 {
+    letter-spacing: 0.5rem;
+    color: white;
+}
+.todoInput {
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+.add-new-item {
+    width: 55%;
+    background-color: rgb(71, 69, 69);
+    height: 45px;
+    border-radius: 5px;
+    margin:35px auto 15px auto;
+}
+#mybtn {
+    width: 0;
+    height: 0;
+    padding: 10px;
+    margin: 0 10px;
+}
+#mybtn:hover {
+    background: transparent;
+    width: 27px;
+    height: 27px;
+    padding: 10px;
+    margin: 0 10px;
+    border: 1px solid rgb(172, 167, 167);
+    border-radius: 50px;
+}
+/* ///////////////////////////////////////////////////// */
+ul {
+    list-style: none;
+    margin: auto;
+    color: white;
+    width: 55%;
+}
+ul li {
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 12px 0px 12px 10px;
+    background-color: rgb(71, 69, 69);
+    border-top: 0.01rem solid rgb(172, 167, 167); 
+}
+ul li:first-child {
+    border: none;
+}
+ul li input[type="checkbox"] {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+ul li label {
+    position: relative;
+    padding: 2px 0 0 7px;
+}
+.checkmark {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 25px;
+    height: 25px;
+}
+.text {
+    margin-left: 25px;
+}
+ul li input[type="checkbox"] ~ .checkmark {
+    border: 1px solid rgb(172, 167, 167);
+    border-radius: 50px;
+}
+ul li input[type="checkbox"]:checked ~ .checkmark {
+    background-image: url(./images/checkpng.png);
+    background-size: cover;
+}
+ul li input[type="checkbox"] ~ .checkmark:hover {
+    background: linear-gradient(135deg, rgb(114, 172, 196), hsl(300, 30%, 59%));
+}
+
+/* When clicked on, add a strike out text */
+ul li.checked {
+    color: rgb(110, 108, 108);
+    text-decoration: line-through;
+}
+/* Style the close button */
+.icon-cross {
+    position: absolute;
+    right: 0;
+    padding: 0px 16px;
+    width: 10px;
+    height: 5px;
+}
+/* clear-item */
+.clear-item {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    width: 55%;
+    margin: auto;
+    background-color: rgb(71, 69, 69);
+    border-top: 0.01rem solid rgb(172, 167, 167);
+    padding: 12px 0px;
+}
+.left-item , .right-item {
+    padding: 0px 10px;
+}
+/* filter item */
+.filter {
+    display: flex;
+    justify-content: center;
+    width: 55%;
+    margin: auto;
+    padding: 12px 0px;
+    margin-top: 15px;
+    background-color: rgb(71, 69, 69);
+    border-radius: 5px;
+}
+.filter span {
+    color: white;
+    cursor: pointer;
+}
+.filter input[type="radio"] {
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+}
+.filter-item span:hover {
+    color: wheat;
+}
